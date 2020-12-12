@@ -1,14 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/menu">Menu</router-link>
-    </div>
+  <div id='app'>
+    <TheHeader />
     <router-view />
+    <TheFooter />
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import TheHeader from './components/TheHeader';
+import TheFooter from './components/TheFooter';
+
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter
+  }
+};
+</script>
+
+<style lang='scss'>
 #app {
 
 }
