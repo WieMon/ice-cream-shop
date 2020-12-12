@@ -9,7 +9,7 @@
       <nav>
         <ul>
           <li>
-            <router-link to='/'>Log in</router-link>
+            <router-link to="/">Log in</router-link>
           </li>
           <li>
             <router-link to='/'>Log out</router-link>
@@ -28,7 +28,7 @@
             <router-link to='/'>Home</router-link>
           </li>
           <li>
-            <router-link to='/'>Menu</router-link>
+            <router-link to="/">Menu</router-link>
           </li>
           <li>
             <router-link to='/'>Visit us</router-link>
