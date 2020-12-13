@@ -28,10 +28,10 @@
             <router-link to='/'>Home</router-link>
           </li>
           <li>
-            <router-link to="/">Menu</router-link>
+            <router-link to="/the-menu">Menu</router-link>
           </li>
           <li>
-            <router-link to='/'>Visit us</router-link>
+            <router-link to='/the-contact'>Visit us</router-link>
           </li>
         </ul>
       </nav>
