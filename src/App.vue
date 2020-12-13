@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang='scss'>
-#app {
+  @import './assets/styles/style.scss';
 
-}
+
 </style>

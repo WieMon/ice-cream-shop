@@ -1,37 +1,39 @@
 <template>
-  <header>
-    <div>
-      <h1></h1>
-      <h2><span>Yummy </span>Ice Cream</h2>
-      <h3>Eat ice cream, be happy!</h3>
+  <header class='header'>
+    <div class='header__title-div'>
+      <h1 class='header__title-first'><font-awesome-icon class='header__icon' icon="ice-cream" /><span>Yummy</span></h1>
+      <h2 class='header__title-second'>Ice Cream</h2>
+      <h3 class='header__title-third'>Eat ice cream, be happy!</h3>
     </div>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <router-link to="/">Log in</router-link>
+    <div class='header__nav-div'>
+  
+      <nav class='header__nav'>
+        <ul class='header__list'>
+          <li class='header__item'>
+            <router-link class='header__link' to="/">Log in</router-link>
           </li>
-          <li>
-            <router-link to='/'>Log out</router-link>
+          <li class='header__item'>
+            <router-link class='header__link' to='/'>Log out</router-link>
           </li>
-          <li>
-            <router-link to='/'>Sign up</router-link>
+          <li class='header__item'>
+            <router-link class='header__link' to='/'>Sign up</router-link>
           </li>
-          <li>
-            <router-link to='/'>Dashboard</router-link>
-          </li>
+          
         </ul>
       </nav>
       <nav>
-        <ul>
-          <li>
-            <router-link to='/'>Home</router-link>
+        <ul class='header__list'>
+          <li class='header__item'>
+            <router-link class='header__link' to='/'>Home</router-link>
           </li>
-          <li>
-            <router-link to="/the-menu">Menu</router-link>
+          <li class='header__item'>
+            <router-link class='header__link' to="/the-menu">Menu</router-link>
           </li>
-          <li>
-            <router-link to='/the-contact'>Visit us</router-link>
+          <li class='header__item'>
+            <router-link class='header__link' to='/the-contact'>Visit us</router-link>
+          </li>
+          <li class='header__item'>
+            <router-link class='header__link' to='/'>Dashboard</router-link>
           </li>
         </ul>
       </nav>
@@ -40,7 +42,11 @@
 </template>
 
 <script>
+export default {
+ 
+};
 </script>
 
 <style>
+
 </style>
