@@ -1,16 +1,25 @@
 <template>
-  <div>
-    <row container gutter='{12}'>
-      <column xs='{12}'>
-      carousel
-      </column>
-    </row>
-    <row container gutter='{12}'>
-      <column xs='{12}' md='{4}'>
-      sth else
-      </column>
-    </row>
-  </div>
+  
+    <v-container>
+      <v-row>
+        <v-col>
+          Carousel
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col sm='12' md='4'>
+          sth 111
+        </v-col>
+        <v-col sm='12' md='4'>
+          sth  2222
+        </v-col>
+        <v-col sm='12' md='4'>
+          sth 3333
+        </v-col>
+      </v-row>
+    </v-container>
+    
+  
 </template>
 
 <script>

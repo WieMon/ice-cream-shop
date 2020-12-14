@@ -1,0 +1,95 @@
+/*=============================
+          GLOBAL
+==============================*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  //background: $color-yellow;//nie dziala
+}
+/*=============================
+          VARIABLES
+==============================*/
+/*Colors*/
+$color-green: #009999;
+$color-yellow: #ffffe6;
+
+
+/*Fonts*/
+$font-family-title: 'Indie Flower', cursive;
+$font-family-text: 'Open Sans', sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+/*Radius*/
+$radius: 20px;
+
+/*=============================
+          TheHeader
+==============================*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 35px;
+  border-radius: $radius;
+  background-color: $color-green;
+  color: $color-yellow;
+}
+
+.header__title-div {
+  font-family: $font-family-title;
+}
+
+.header__icon {
+  margin: 0 10px -20px 0;
+  font-size: 84px;
+}
+
+.header__title-first {
+  font-size: 58px;
+  font-weight: $font-weight-normal;
+}
+
+.header__title-second {
+  margin: -25px 0 -10px 90px;
+  font-size: 28px;
+  font-weight: $font-weight-normal;
+}
+
+.header__title-third {
+  margin: 10px 0 0 20px;
+  font-size: 20px;
+  font-weight: $font-weight-normal;
+  font-family: $font-family-text;
+}
+
+.header__icon {
+
+}
+.header__list {
+  display: flex;
+  justify-content: right;
+}
+
+.header__item {
+  margin: 20px;
+  list-style: none;
+}
+
+
+.header__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color:$color-yellow;
+}
+
+
+
+

@@ -6,8 +6,10 @@
       <h3 class='header__title-third'>Eat ice cream, be happy!</h3>
     </div>
     <div class='header__nav-div'>
-  
-      <nav class='header__nav'>
+<div v-if='isVisible'>
+  Hamburger
+</div>
+      <nav v-if='!isVisible' class='header__nav'>
         <ul class='header__list'>
           <li class='header__item'>
             <router-link class='header__link' to="/">Log in</router-link>
@@ -18,10 +20,12 @@
           <li class='header__item'>
             <router-link class='header__link' to='/'>Sign up</router-link>
           </li>
-          
+           <li class='header__item'>
+            <router-link class='header__link' to='/'>Dashboard</router-link>
+          </li>
         </ul>
       </nav>
-      <nav>
+      <nav v-if='!isVisible'>
         <ul class='header__list'>
           <li class='header__item'>
             <router-link class='header__link' to='/'>Home</router-link>
@@ -32,9 +36,7 @@
           <li class='header__item'>
             <router-link class='header__link' to='/the-contact'>Visit us</router-link>
           </li>
-          <li class='header__item'>
-            <router-link class='header__link' to='/'>Dashboard</router-link>
-          </li>
+         
         </ul>
       </nav>
     </div>
@@ -43,10 +45,13 @@
 
 <script>
 export default {
- 
+ computed: {
+   isVisible() {
+     return this.$vuetify.breakpoint.sm;
+   },
+ }
 };
 </script>
 
-<style>
-
+<style >
 </style>
