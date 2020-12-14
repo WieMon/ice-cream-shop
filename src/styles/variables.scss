@@ -73,23 +73,20 @@ $radius: 20px;
 .header__icon {
 
 }
-.header__list {
+
+.header__list, .header__nav-list {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
+
 
 .header__item {
   margin: 20px;
   list-style: none;
 }
 
-
 .header__link {
   text-transform: uppercase;
   text-decoration: none;
-  color:$color-yellow;
+  color: $color-yellow;
 }
-
-
-
-
