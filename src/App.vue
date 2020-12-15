@@ -20,5 +20,8 @@ export default {
     TheHeader,
     TheFooter
   },
+  created(){
+    this.$store.dispatch('refreshToken');
+  }
 };
 </script>
