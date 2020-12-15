@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import TheHome from '../views/TheHome.vue';
 import TheMenu from '../views/TheMenu.vue';
 import TheContact from '../views/TheContact.vue';
+import SignUp from '../views/SignUp.vue';
+import SignIn from '../views/SignIn.vue';
 
 Vue.use(VueRouter);
 
@@ -16,21 +18,21 @@ const routes = [
     path: '/the-menu',
     name: 'TheMenu',
     component: TheMenu,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () =>
-    //   import(/* webpackChunkName: 'about' */ '../views/TheMenu.vue')
   },
   {
     path: '/the-contact',
     name: 'TheContact',
     component: TheContact,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () =>
-    //   import(/* webpackChunkName: 'about' */ '../views/TheMenu.vue')
+  },
+  {
+    path: '/sign-up',
+    name: 'SignUp',
+    component: SignUp,
+  },
+  {
+    path: '/sign-in',
+    name: 'SignIn',
+    component: SignIn,
   }
 ];
 

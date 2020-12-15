@@ -8,16 +8,16 @@
     <div>
       <nav>
         <ul class='header__list'>
-          <li class='header__item'>
-            <router-link class='header__link' to="/">Log in</router-link>
+          <li class='header__item' v-if='!isAuth'>
+            <router-link class='header__link' to="/sign-in">Sign in</router-link>
+          </li>
+          <li class='header__item' v-if='isAuth'>
+            <span class='header__link' @click='signout'>Sign out</span>
           </li>
           <li class='header__item'>
-            <router-link class='header__link' to='/'>Log out</router-link>
+            <router-link class='header__link' to='/sign-up'>Sign up</router-link>
           </li>
-          <li class='header__item'>
-            <router-link class='header__link' to='/'>Sign up</router-link>
-          </li>
-          <li class='header__item'>
+          <li class='header__item' v-if='isAuth'>
             <router-link class='header__link' to='/'>Dashboard</router-link>
           </li>
         </ul>
@@ -73,13 +73,18 @@ export default {
       ]
     };
   },
- computed: {
-   isVisible() {
-     return this.$vuetify.breakpoint.sm;
-   },
- }
+  computed: {
+    isVisible() {
+      return this.$vuetify.breakpoint.sm;
+    },
+    isAuth() {
+      return this.$store.getters.isAuth;
+    }
+ },
+ methods: {
+    signout() {
+      this.$store.commit('logout');
+    }
+  }
 };
 </script>
-
-<style >
-</style>
