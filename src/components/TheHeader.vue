@@ -14,12 +14,10 @@
           <li class='header__item' v-if='isAuth'>
             <span class='header__link' @click='signout'>Sign out</span>
           </li>
-          <li class='header__item'>
-            <router-link class='header__link' to='/sign-up'>Sign up</router-link>
+          <li class='header__item' v-if='!isAuth'>
+            <router-link class='header__link' to='/sign-up'>Register</router-link>
           </li>
-          <li class='header__item' v-if='isAuth'>
-            <router-link class='header__link' to='/'>Dashboard</router-link>
-          </li>
+        
         </ul>
       </nav>
       <nav class='header__nav-list' v-if='isVisible'>
@@ -56,6 +54,9 @@
           <li class='header__item'>
             <router-link class='header__link' to='/the-contact'>Visit us</router-link>
           </li>
+            <li class='header__item' >
+            <router-link class='header__link' to='/user-dashboard'>Dashboard</router-link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -69,17 +70,18 @@ export default {
       links: [
         {text: 'Home', route: '/'},
         {text: 'Menu', route: '/the-menu'},
-        {text: 'Visit us', route: '/the-contact'}
+        {text: 'Visit us', route: '/the-contact'},
+        {text: 'Dashboard', route: '/user-dashboard'}
       ]
     };
   },
   computed: {
     isVisible() {
-      return this.$vuetify.breakpoint.sm;
+      return this.$vuetify.breakpoint.xs;
     },
     isAuth() {
       return this.$store.getters.isAuth;
-    }
+    },
  },
  methods: {
     signout() {
