@@ -1,18 +1,4 @@
 /*=============================
-          GLOBAL
-==============================*/
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  min-height: 100%;
-  //background: $color-yellow;//nie dziala
-}
-/*=============================
           VARIABLES
 ==============================*/
 /*Colors*/
@@ -30,10 +16,92 @@ $font-weight-bold: 700;
 /*Radius*/
 $radius: 20px;
 
+/*Breakpoints*/
+// $sm-breakpoint: 340px;
+// $md-breakpoint: 600px;
+// $lg-breakpoint: 960px;
+// $xl-breakpoint: 1264px;
+
+// @mixin xs {
+//   @media only screen and (max-width: $sm-breakpoint - 1)
+//   {@content;}
+// }
+
+// @mixin sm {
+//   @media screen and (min-width: $sm-breakpoint) 
+//   {@content;}
+// }
+
+// @mixin md {
+//   @media screen and (min-width: $md-breakpoint) 
+//   {@content;}
+// }
+
+// @mixin lg {
+//   @media screen and (min-width: $lg-breakpoint) 
+//   {@content;}
+// }
+
+// @mixin xl {
+//   @media screen and (min-width: $lx-breakpoint)
+//   {@content;}
+// }
+
+$xs-breakpoint: 340px;
+$sm-breakpoint: 600px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 960px;
+$xl-breakpoint: 1600px;
+
+@mixin xxs {
+  @media only screen and (max-width: $xs-breakpoint - 1)
+  {@content;}
+}
+
+
+@mixin xs {
+  @media only screen and (min-width: $xs-breakpoint)
+  {@content;}
+}
+
+@mixin sm {
+  @media screen and (min-width: $sm-breakpoint) 
+  {@content;}
+}
+
+@mixin md {
+  @media screen and (min-width: $md-breakpoint) 
+  {@content;}
+}
+
+@mixin lg {
+  @media screen and (min-width: $lg-breakpoint) 
+  {@content;}
+}
+
+@mixin xl {
+  @media screen and (min-width: $lx-breakpoint)
+  {@content;}
+}
+/*=============================
+          GLOBAL
+==============================*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  min-height: 100%;
+  background: $color-yellow;//nie dziala
+}
+
+
 /*=============================
           TheHeader
 ==============================*/
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -44,41 +112,78 @@ $radius: 20px;
 }
 
 .header__title-div {
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
   font-family: $font-family-title;
 }
 
 .header__icon {
-  margin: 0 10px -20px 0;
-  font-size: 84px;
+  margin: 0 0 -12px 0;
+  font-size: 54px;
+  @include sm {
+    margin: 0 0 -22px 0;
+    font-size: 80px;
+  }
+  @include md {
+    font-size: 82px;
+  }
+  @include lg {
+    font-size: 84px;
+  }
 }
 
-.header__title-first {
-  font-size: 58px;
+.header__title-span {
+  font-size: 36px;
   font-weight: $font-weight-normal;
+  @include sm {
+    font-size: 44px;
+  }
+  @include md {
+    font-size: 58px;
+  }
+  @include lg {
+    font-size: 58px;
+  }
 }
 
 .header__title-second {
-  margin: -25px 0 -10px 90px;
-  font-size: 28px;
+  margin: -20px 0 -15px 50px;
+  font-size: 20px;
   font-weight: $font-weight-normal;
+  @include sm {
+    margin: -20px 0 -10px 80px;
+    font-size: 22px;
+  }
+  @include md {
+    font-size: 26px;
+  }
+  @include lg {
+    font-size: 28px;
+  }
 }
 
 .header__title-third {
-  margin: 10px 0 0 20px;
-  font-size: 20px;
+  margin: 10px 0 0 0;
+  font-size: 16px;
   font-weight: $font-weight-normal;
   font-family: $font-family-text;
-}
-
-.header__icon {
-
+  @include sm {
+    margin: 10px 0 0 10px;
+    font-size: 16px;
+  }
+  @include md {
+    font-size: 18px;
+  }
+  @include lg {
+    font-size: 20px;
+  }
 }
 
 .header__list, .header__nav-list {
   display: flex;
   justify-content: flex-end;
 }
-
 
 .header__item {
   margin: 20px;
@@ -90,6 +195,7 @@ $radius: 20px;
   text-decoration: none;
   color: $color-yellow;
 }
+
 
 /*=============================
           input

@@ -1,7 +1,7 @@
 <template>
   <header class='header'>
     <div class='header__title-div'>
-      <h1 class='header__title-first'><font-awesome-icon class='header__icon' icon="ice-cream" /><span>Yummy</span></h1>
+      <h1 class='header__title'><font-awesome-icon class='header__icon' icon="ice-cream" /><span class='header__title-span'>Yummy</span></h1>
       <h2 class='header__title-second'>Ice Cream</h2>
       <h3 class='header__title-third'>Eat ice cream, be happy!</h3>
     </div>
@@ -12,12 +12,11 @@
             <router-link class='header__link' to="/sign-in">Sign in</router-link>
           </li>
           <li class='header__item' v-if='isAuth'>
-            <span class='header__link' @click='signout'>Sign out</span>
+                <span class='header__link' @click='signout'>Sign out</span>
           </li>
           <li class='header__item' v-if='!isAuth'>
             <router-link class='header__link' to='/sign-up'>Register</router-link>
           </li>
-        
         </ul>
       </nav>
       <nav class='header__nav-list' v-if='isVisible'>
@@ -53,10 +52,7 @@
           </li>
           <li class='header__item'>
             <router-link class='header__link' to='/the-contact'>Visit us</router-link>
-          </li>
-            <li class='header__item' >
-            <router-link class='header__link' to='/user-dashboard'>Dashboard</router-link>
-          </li>
+         </li>
         </ul>
       </nav>
     </div>
