@@ -8,51 +8,60 @@
     <div>
       <nav>
         <ul class='header__list'>
-          <li class='header__item' v-if='!isAuth'>
-            <router-link class='header__link' to="/sign-in">Sign in</router-link>
-          </li>
-          <li class='header__item' v-if='isAuth'>
-                <span class='header__link' @click='signout'>Sign out</span>
-          </li>
-          <li class='header__item' v-if='!isAuth'>
-            <router-link class='header__link' to='/sign-up'>Register</router-link>
+          <li class='header__item-first'>
+            <router-link class='header__link-first' to='#'><font-awesome-icon icon='user' /></router-link>
+            <ul class='header__list-second'>
+              <li class='header__item-second' v-if='!isAuth'>
+                <router-link class='header__link-second' to='/sign-in'>Sign in</router-link>
+              </li>
+              <li class='header__item-second' v-if='isAuth'>
+                <span class='header__link-second' @click='signout'>Sign out</span>
+              </li>
+              <li class='header__item-second' v-if='!isAuth'>
+                <router-link class='header__link-second' to='/sign-up'>Register</router-link>
+              </li>
+              <li class='header__item-second' v-if='isAuth'>
+                <router-link class='header__link-second' to='/user-dashboard'>Dashboard</router-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
-      <nav class='header__nav-list' v-if='isVisible'>
-        <v-menu content-class='header__list' bottom left>
+     <nav class='header__nav-list' v-if='isVisible'>
+        <v-menu bottom left>
           <template v-slot:activator='{ on, attrs }'>
             <v-btn 
               dark
               icon
               v-bind='attrs'
               v-on='on'
-            >
-              <v-icon>mdi-dots-vertical</v-icon>
+            > 
+              <v-icon large>mdi-format-align-justify</v-icon>
             </v-btn>
           </template>
-          <v-list>
+          <v-list >
             <v-list-item
               v-for='(link, i) in links'
               :key='i'
               :to='link.route'
             >
-              <v-list-item-title>{{ link.text }}</v-list-item-title>
+              <v-list-item-title >{{ link.text }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
       </nav>
-      <nav v-if='!isVisible'>
+      <nav class='header__nav' v-if='!isVisible'>
         <ul class='header__list'>
-          <li class='header__item'>
-            <router-link class='header__link' to='/'>Home</router-link>
+          <li class='header__item-main'>
+            <router-link class='header__link-main' to='/'>Home</router-link>
           </li>
-          <li class='header__item'>
-            <router-link class='header__link' to="/the-menu">Menu</router-link>
+          <li class='header__item-main'>
+            <router-link class='header__link-main' to="/the-menu">Menu</router-link>
           </li>
-          <li class='header__item'>
-            <router-link class='header__link' to='/the-contact'>Visit us</router-link>
+          <li class='header__item-main'>
+            <router-link class='header__link-main' to='/the-contact'>Visit us</router-link>
          </li>
+           
         </ul>
       </nav>
     </div>
@@ -73,7 +82,7 @@ export default {
   },
   computed: {
     isVisible() {
-      return this.$vuetify.breakpoint.xs;
+      return this.$vuetify.breakpoint.sm;
     },
     isAuth() {
       return this.$store.getters.isAuth;

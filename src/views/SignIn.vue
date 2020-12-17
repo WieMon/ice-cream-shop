@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col>
-        <form @submit.prevent="onSubmit">
+        <form class='input__form' @submit.prevent="onSubmit">
           <h2>Sign in</h2>
           <div class='input'>
             <label class='input__label'>Email</label>
@@ -10,7 +10,7 @@
           </div>
           <div class='input'>
             <label class='input__label'>Password</label>
-            <input class='input__field' type='password' v-model='formdata.password' />
+            <input class='input__field' type='text' v-model='formdata.password' />
           </div>
           <button class='button'>
           Sign in
