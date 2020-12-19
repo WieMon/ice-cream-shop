@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import TheHome from '../views/TheHome.vue';
+import TheHome from '../views/Home/TheHome.vue';
 import TheMenu from '../views/TheMenu.vue';
 import TheContact from '../views/TheContact.vue';
 import SignUp from '../views/SignUp.vue';

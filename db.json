@@ -1,12 +1,148 @@
 {
   "items": {
     "item1": {
-      "feature1": "A1",
-      "feature2": "A2"
+      "img": "ice-cream-1.png",
+      "alt": "Chocolate ice cream",
+      "title": "Chocolate",
+      "price1": "4",
+      "price2": "3",
+      "type": "ice cream"
     },
     "item2": {
-      "feature1": "B1",
-      "feature2": "B2"
+      "img": "ice-cream-2.png",
+      "alt": "Vanilla ice cream",
+      "title": "Vanilla",
+      "price1": "4",
+      "price2": "3",
+      "type": "ice cream"
+    },
+    "item3": {
+      "img": "ice-cream-3.png",
+      "alt": "Sweet cream ice cream",
+      "title": "sweat cream",
+      "price1": "3",
+      "price2": "2.5",
+      "type": "ice cream"
+    },
+    "item4": {
+      "img": "ice-cream-4.png",
+      "alt": "Strawberry ice cream",
+      "title": "Strawberry",
+      "price1": "3",
+      "price2": "2.5",
+      "type": "ice cream"
+    },
+    "item5": {
+      "img": "ice-cream-5.png",
+      "alt": "Ice cream mint with chocolate",
+      "title": "Mint with chocolate",
+      "price1": "5",
+      "price2": "3.5",
+      "type": "ice cream"
+    },
+    "item6": {
+      "img": "ice-cream-6.png",
+      "alt": "Fruit sorber ice cream",
+      "title": "Fruit sorbet",
+      "price1": "4",
+      "price2": "3",
+      "type": "ice cream"
+    },
+    "item7": {
+      "img": "dessert-1.png",
+      "alt": "Chocolate meringue dessert",
+      "title": "Chocolate meringue",
+      "price1": "12",
+      "price2": "14",
+      "type": "dessert"
+    },
+    "item8": {
+      "img": "dessert-2.png",
+      "alt": "Strawberries with whipped cream dessert",
+      "title": "Strawberries with whipped cream",
+      "price1": "10",
+      "price2": "12",
+      "type": "dessert"
+    },
+    "item9": {
+      "img": "dessert-3.png",
+      "alt": "Mint pudding dessert",
+      "title": "Mint pudding",
+      "price1": "14",
+      "price2": "16",
+      "type": "dessert"
+    },
+    "item10": {
+      "img": "dessert-4.png",
+      "alt": "Fresh fruits ice cream dessert",
+      "title": "Fresh fruits ice cream",
+      "price1": "10",
+      "price2": "12",
+      "type": "dessert"
+    },
+    "item11": {
+      "img": "dessert-5.png",
+      "alt": "Maple-mint cream dessert",
+      "title": "Maple-mint cream",
+      "price1": "14",
+      "price2": "16",
+      "type": "dessert"
+    },
+    "item12": {
+      "img": "dessert-6.png",
+      "alt": "Chocolate red currant cream dessert",
+      "title": "Chocolate red currant cream",
+      "price1": "9",
+      "price2": "11",
+      "type": "dessert"
+    },
+    "item13": {
+      "img": "drink-1.png",
+      "alt": "Coffee drink",
+      "title": "Freshly brewed coffee",
+      "price1": "6",
+      "price2": "8",
+      "type": "drink"
+    },
+    "item14": {
+      "img": "drink-2.png",
+      "alt": "Tea drink",
+      "title": "Aromatic tea",
+      "price1": "5",
+      "price2": "7",
+      "type": "drink"
+    },
+    "item15": {
+      "img": "drink-3.png",
+      "alt": "Drinking chocolate",
+      "title": "Drinking chocolate",
+      "price1": "4",
+      "price2": "6",
+      "type": "drink"
+    },
+    "item16": {
+      "img": "drink-4.png",
+      "alt": "Milkshake drink",
+      "title": "Milkshakes",
+      "price1": "4",
+      "price2": "6",
+      "type": "drink"
+    },
+    "item17": {
+      "img": "drink-5.png",
+      "alt": "Freshly squeezed juice drink",
+      "title": "Freshly squeezed juice",
+      "price1": "5",
+      "price2": "7",
+      "type": "drink"
+    },
+    "item18": {
+      "img": "drink-6.png",
+      "alt": "Juice coctails",
+      "title": "Juice coctails",
+      "price1": "8",
+      "price2": "10",
+      "type": "drink"
     }
   }
 }

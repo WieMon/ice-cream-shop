@@ -1,7 +1,7 @@
 <template>
   <header class='header'>
     <div class='header__title-div'>
-      <h1 class='header__title'><font-awesome-icon class='header__icon' icon="ice-cream" /><span class='header__title-span'>Yummy</span></h1>
+      <h1 class='header__title'><font-awesome-icon class='header__icon' icon='ice-cream' /><span class='header__title-span'>Yummy</span></h1>
       <h2 class='header__title-second'>Ice Cream</h2>
       <h3 class='header__title-third'>Eat ice cream, be happy!</h3>
     </div>
