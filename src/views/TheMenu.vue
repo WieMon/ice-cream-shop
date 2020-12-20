@@ -1,7 +1,21 @@
 <template>
-  <v-container >
-    <v-row class='menu'>
-      <md-card class='menu__card' v-for='(item,index) in items' :key='index'>
+  <v-container class='menu'>
+    <v-row class='menu__row'>
+      <md-button class='button'
+        v-for='(button,index) in buttons'
+        :key='index'
+        @click='changeMenu(button.name)'
+      >
+        {{ button.name }}
+      </md-button>
+    </v-row>
+    <v-row class='menu__row'>
+      <md-card 
+        class='menu__card' 
+        v-for='(item,index) in items' 
+        :key='index'  
+        v-show='item.type === activeProduct'
+      >
         <md-card-media class='menu__media' >
           <img class='menu__img' :src="require(`../assets/menu/${item.img}`)" />
         </md-card-media>
@@ -22,8 +36,26 @@
 export default {
   data() {
     return {
-       items: [],
+      buttons: [
+        {name: 'ice cream', active: true},
+        {name: 'dessert', active: false},
+        {name: 'drink', active: false}
+      ],
+      items: [],
+      activeProduct: 'ice cream'
     };
+  },
+  methods: {
+    changeMenu(value) {
+      this.buttons.forEach(button => {
+        if(button.name == value) {
+          button.active = true;
+          this.activeProduct = value;
+        } else {
+          button.active = false;
+        }
+      });
+    }
   },
   created() {
     this.$http.get('items.json')

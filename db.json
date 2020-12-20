@@ -5,7 +5,7 @@
       "alt": "Chocolate ice cream",
       "title": "Chocolate",
       "price1": "4",
-      "price2": "3",
+      "price2": "5",
       "type": "ice cream"
     },
     "item2": {
@@ -13,7 +13,7 @@
       "alt": "Vanilla ice cream",
       "title": "Vanilla",
       "price1": "4",
-      "price2": "3",
+      "price2": "5",
       "type": "ice cream"
     },
     "item3": {
@@ -21,7 +21,7 @@
       "alt": "Sweet cream ice cream",
       "title": "sweat cream",
       "price1": "3",
-      "price2": "2.5",
+      "price2": "4",
       "type": "ice cream"
     },
     "item4": {
@@ -29,23 +29,23 @@
       "alt": "Strawberry ice cream",
       "title": "Strawberry",
       "price1": "3",
-      "price2": "2.5",
+      "price2": "4",
       "type": "ice cream"
     },
     "item5": {
       "img": "ice-cream-5.png",
       "alt": "Ice cream mint with chocolate",
       "title": "Mint with chocolate",
-      "price1": "5",
-      "price2": "3.5",
+      "price1": "6",
+      "price2": "7",
       "type": "ice cream"
     },
     "item6": {
       "img": "ice-cream-6.png",
       "alt": "Fruit sorber ice cream",
       "title": "Fruit sorbet",
-      "price1": "4",
-      "price2": "3",
+      "price1": "3",
+      "price2": "4",
       "type": "ice cream"
     },
     "item7": {

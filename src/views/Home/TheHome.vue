@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-content>
+    <v-container>
       <v-row>
         <v-col>
           <HomeSlider />
@@ -11,7 +11,7 @@
           <HomeContent />
         </v-col>
       </v-row>
-    </v-content>
+    </v-container>
   </div>
 </template>
 

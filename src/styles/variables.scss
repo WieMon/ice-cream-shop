@@ -12,6 +12,7 @@ $color-green-dark: #008080;
 $color-red: #ff6b6b;
 $color-red-dark: #e42b2b;
 $color-brown: #291107;
+$color-brown-light: #7e4024;
 
 /*Fonts*/
 $font-family-title: 'Indie Flower', cursive;
@@ -34,7 +35,6 @@ $xl-breakpoint: 1600px;
   @media only screen and (max-width: $xs-breakpoint - 1)
   {@content;}
 }
-
 
 @mixin xs {
   @media only screen and (min-width: $xs-breakpoint)
@@ -258,7 +258,7 @@ html, body, #app {
 /*=============================
           TheMenu
 ==============================*/
-.menu {
+.menu__row {
   justify-content: center;
 }
 
@@ -286,6 +286,8 @@ html, body, #app {
 .menu__title {
   margin: 15px;
 }
+
+
 /*=============================
           input
 ==============================*/
@@ -304,5 +306,16 @@ html, body, #app {
           button
 ==============================*/
 .button {
-  border: 1px solid black;
+  margin: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: $color-brown;
+  border: 1px solid $color-yellow-dark;
+  border-radius: $radius;
+  box-shadow: 4px 4px 5px 2px $color-brown-light;
+  cursor: pointer;
+  &:hover {
+    color: $color-red;
+    box-shadow: 4px 4px 5px 2px $color-red;
+  }
 }
