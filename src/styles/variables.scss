@@ -79,6 +79,7 @@ body, #app {
   background: $color-yellow;
 }
 
+
 /*=============================
           TheHeader
 ==============================*/
@@ -294,6 +295,51 @@ body, #app {
   margin: 15px;
 }
 
+/*=============================
+          TheHome
+==============================*/
+.slider__row {
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; //?
+}
+
+.slider__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 700px;
+  height: 500px;
+  padding: 10px 50px;
+  color: $color-brown;
+  background-color: $color-yellow;
+  box-shadow: 4px 4px 15px 2px $color-yellow-dark;
+  border-radius: $radius;
+}
+
+.slider__img {
+  width: 100%;
+  border-radius: $radius;
+}
+
+.slider__icon {
+  font-size: 50px;
+  color: $color-brown-light;
+  margin: 30px;
+}
+
+.fade-enter-active {
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+}
+
+.fade-enter {
+  opacity: 0;
+  visibility: hidden;
+}
 
 /*=============================
           input
