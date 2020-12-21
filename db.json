@@ -154,7 +154,7 @@
     "slide2": {
       "img": "slide-2.png",
       "alt": "Ice cream cones",
-      "text": "Now you can choose your favorite flavor of ice cream cone. Are you ready to try new chocolate cones or prefer the taditional ones?"
+      "text": "Now you can choose your favorite flavor of ice cream cone. Are you ready to try new chocolate cones or prefer the traditional ones?"
     },
     "slide3": {
       "img": "slide-3.png",
@@ -165,6 +165,29 @@
       "img": "slide-4.png",
       "alt": "Ice cream truck",
       "text": "Yummy in Greece!!! Come and see the slideshow from our trip along the Mediterranean coast. See you on Friday 8 p.m."
+    }
+  },
+  "reviews": {
+    "review1": {
+      "text": "Amazing choice of flavours and options. Queue coming out of the door and clearly incredibly popular.",
+      "author": "Daily magazine"
+    },
+    "review2": {
+       "text": "Delicious homemade ice cream in many inventive flavors. The line moves fast and even if it doesn’t, it’s worth the wait.",
+       "author": "Tripadvisor"
+    },
+    "review3": {
+       "text": "There are many vegan options in this favorite ice cream spot for us vegans who actually want something other than sorbet...",
+       "author": "Timeout"
+    }
+  },
+  "histories": {
+    "history1": {
+      "img": "history-1.png",
+      "alt": "Cafe in the Old Town",
+      "title": "Our story",
+      "text1": "Born out of the need for fine homemade ice cream, Yummy was opened in 2005. We started with a small ice cream shop in the Old Town. Today we can invite you to our cafe where you can taste one of the several types of the highest quality, best tasting homemade ice cream. We also offer various desserts, hot and cold drinks.",
+      "text2": "On every Thursday we organize special events. Author's meetings, life-music concerts, movie presentations, travel slideshows.... At our cafe you will meet interesting people and their passions."
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
-  <v-container class='slider'>
-    <v-row class='slider__row'>
+  <v-container>
+    <v-row class='row'>
      <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
       <transition-group name='fade' tag='div'>
         <div class='slider__div' v-for="number in [currentNumber]" :key='number'>
@@ -10,7 +10,7 @@
             v-on:mouseover='stopSlider' 
             v-on:mouseout='startSlider' 
           />
-          <p 
+          <p
             :src='currentDescription'>
               {{currentDescription}}
           </p>
@@ -18,6 +18,7 @@
       </transition-group>
       <a @click="nextImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-right' /></a>
     </v-row>
+    
   </v-container>
 </template>
 
@@ -65,7 +66,7 @@ export default {
   },
   computed: {
     currentImage: function() {
-      return require(`../assets/slider/${this.slides[Math.abs(this.currentNumber) % this.slides.length].img}`);
+      return require(`../../assets/slider/${this.slides[Math.abs(this.currentNumber) % this.slides.length].img}`);
     },
     currentDescription: function() {
       return this.slides[Math.abs(this.currentNumber) % this.slides.length].text;

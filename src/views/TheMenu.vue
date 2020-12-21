@@ -1,6 +1,6 @@
 <template>
-  <v-container class='menu'>
-    <v-row class='menu__row'>
+  <v-container>
+    <v-row class='row'>
       <md-button class='button'
         v-for='(button,index) in buttons'
         :key='index'
@@ -9,21 +9,21 @@
         {{ button.name }}
       </md-button>
     </v-row>
-    <v-row class='menu__row'>
+    <v-row class='row'>
       <md-card 
         class='menu__card' 
         v-for='(item,index) in items' 
         :key='index'  
         v-show='item.type === activeProduct'
       >
-        <md-card-media class='menu__media' >
+        <md-card-media>
           <img class='menu__img' :src="require(`../assets/menu/${item.img}`)" />
         </md-card-media>
         <md-card-header class='menu__header'>
           <h3 class='menu__title'>{{ item.title }}</h3>
         </md-card-header>
         <md-card-content class='menu__text'>
-          <span>Price: {{ item.price1 }} zł</span>
+          <span >Price: {{ item.price1 }} zł</span>
           <br>
           <span>If you decide to take it away: {{ item.price2 }} zł</span>
         </md-card-content>
