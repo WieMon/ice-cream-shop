@@ -1,0 +1,57 @@
+/*=============================
+          HomeContent
+==============================*/
+.content__card {
+  display: flex;
+  margin: 30px;
+  padding: 20px;
+}
+
+.content__card--rev {
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  color: $color-yellow;
+  text-shadow: 1px 1px 1px $color-brown;
+  background-color: $color-brown-light;
+  box-shadow: 4px 3px 10px 5px $color-yellow-dark;
+  border-radius: $radius-circle;
+  &:hover {
+    transform: $transform;
+    box-shadow: 
+    4px 3px 5px 1px $color-brown,
+    6px 3px 7px 6px $color-yellow-dark,
+  }
+}
+
+.content__span {
+  font-weight: 700;
+  font-family: $font-family-title;
+}
+
+.content__card--hist {
+  flex-direction: column;
+  text-align: center;
+  width: 800px;
+  color: $color-brown;
+  border: 1px solid $color-yellow-dark;
+  box-shadow: 4px 4px 5px 2px $color-brown-light;
+  border-radius: $radius;
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.content__title {
+  margin-bottom: 18px;
+}
+.content__img {
+  margin: 30px 0 0 0;
+  height: 100%;
+  border-radius: $radius;
+  @include md {
+    margin: 0 0 0 30px;
+  }
+} 
+

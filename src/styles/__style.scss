@@ -1,0 +1,68 @@
+/*=============================
+          VARIABLES
+==============================*/
+/*Colors*/
+$color-green: #009999;
+$color-yellow: #ffffe6;
+$color-yellow-light: #e7e6d2;
+$color-yellow-dark: #dabb82;
+$color-green-light: #99ffff;
+$color-green-semi: #33cccc;
+$color-green-dark: #008080;
+$color-red: #ff6b6b;
+$color-red-dark: #e42b2b;
+$color-brown: #291107;
+$color-brown-light: #7a5c51;
+
+/*Fonts*/
+$font-family-title: 'Indie Flower', cursive;
+$font-family-text: 'Open Sans', sans-serif;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+/*Radius*/
+$radius: 20px;
+$radius-circle: 50%;
+
+/**/
+$transform: scale(1.2);
+
+/*Header height*/
+$height-header: 160px;
+
+/*Breakpoints*/
+$xs-breakpoint: 340px;
+$sm-breakpoint: 600px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 960px;
+$xl-breakpoint: 1600px;
+
+@mixin xxs {
+  @media only screen and (max-width: $xs-breakpoint - 1)
+  {@content;}
+}
+
+@mixin xs {
+  @media only screen and (min-width: $xs-breakpoint)
+  {@content;}
+}
+
+@mixin sm {
+  @media screen and (min-width: $sm-breakpoint) 
+  {@content;}
+}
+
+@mixin md {
+  @media screen and (min-width: $md-breakpoint) 
+  {@content;}
+}
+
+@mixin lg {
+  @media screen and (min-width: $lg-breakpoint) 
+  {@content;}
+}
+
+@mixin xl {
+  @media screen and (min-width: $lx-breakpoint)
+  {@content;}
+}

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class='row'>
-     <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
+      <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
       <transition-group name='fade' tag='div'>
         <div class='slider__div' v-for="number in [currentNumber]" :key='number'>
           <img  

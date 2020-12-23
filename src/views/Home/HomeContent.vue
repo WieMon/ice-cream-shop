@@ -34,7 +34,7 @@
          </p>
         </md-card-content> 
         <md-card-media >
-          <img class='content__img' :src="require(`../../assets/history/${history.img}`)">
+          <img class='contact__img' :src="require(`../../assets/history/${history.img}`)">
         </md-card-media>
       </md-card>
     </v-row>

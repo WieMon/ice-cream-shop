@@ -1,0 +1,17 @@
+/*=============================
+          button
+==============================*/
+.button {
+  margin: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: $color-brown;
+  border: 1px solid $color-yellow-dark;
+  border-radius: $radius;
+  box-shadow: 4px 4px 5px 2px $color-brown-light;
+  cursor: pointer;
+  &:hover {
+    color: $color-red;
+    box-shadow: 4px 4px 5px 2px $color-red;
+  }
+}

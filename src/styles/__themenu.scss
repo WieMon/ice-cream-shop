@@ -1,0 +1,25 @@
+/*=============================
+          TheMenu
+==============================*/
+.menu__card {
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+  width: 420px;
+  background-color: $color-yellow;
+  box-shadow: 4px 4px 15px 2px $color-yellow-dark;
+  border-radius: $radius;
+  color: $color-brown;
+}
+
+.menu__title {
+  margin: 15px;
+}
+
+.menu__text {
+  margin-bottom: 10px;
+}
+
+.menu__img {
+  border-radius: $radius;
+}

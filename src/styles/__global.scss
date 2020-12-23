@@ -1,0 +1,21 @@
+/*=============================
+          GLOBAL
+==============================*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, #app {
+  height: 100%;
+  min-height: 100%;
+  margin-top: $height-header;
+  background: $color-yellow;
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; 
+}

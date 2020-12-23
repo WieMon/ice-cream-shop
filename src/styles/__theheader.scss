@@ -1,0 +1,182 @@
+/*=============================
+          TheHeader
+==============================*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: $height-header;
+  top: 0;
+  z-index: 1;
+  padding: 20px 35px;
+  border-radius: $radius;
+  background-color: $color-green-dark;
+  color: $color-yellow;
+  box-shadow: 0.5em 0.5em 0.7em $color-green-semi;
+}
+
+/*Title*/
+.header__title-div {
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  font-family: $font-family-title;
+}
+
+.header__icon {
+  margin: 0 0 -12px 0;
+  font-size: 54px;
+
+  @include sm {
+    margin: 0 0 -22px 0;
+    font-size: 80px;
+  }
+  @include md {
+    font-size: 82px;
+  }
+  @include lg {
+    font-size: 84px;
+  }
+}
+
+.header__title-span {
+  font-size: 36px;
+  font-weight: $font-weight-normal;
+  text-shadow: 
+  3px 3px 4px $color-yellow-dark,
+  2px 2px 5px $color-red;
+  @include sm {
+    font-size: 44px;
+  }
+  @include md {
+    font-size: 58px;
+  }
+  @include lg {
+    font-size: 58px;
+  }
+}
+
+.header__title-second {
+  margin: -20px 0 -15px 50px;
+  font-size: 20px;
+  font-weight: $font-weight-normal;
+  @include sm {
+    margin: -20px 0 -10px 80px;
+    font-size: 22px;
+  }
+  @include md {
+    font-size: 26px;
+  }
+  @include lg {
+    font-size: 28px;
+  }
+}
+
+.header__title-third {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  font-family: $font-family-text;
+  @include sm {
+    margin: 10px 0 0 10px;
+    font-size: 16px;
+  }
+  @include md {
+    font-size: 18px;
+  }
+  @include lg {
+    font-size: 20px;
+  }
+}
+
+/*Views navigation*/
+.header__list, .header__nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__item-main {
+  margin: 20px;
+  padding: 10px 20px;
+  list-style: none;
+}
+
+.header__link-main {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-red;
+  padding: 10px 20px; 
+  background-color: $color-green-light;
+  border-radius: $radius;
+  box-shadow: 4px 4px 1px 2px $color-red;
+  &:hover {
+    color: $color-red-dark;
+    box-shadow: 4px 4px 1px 2px $color-red-dark;
+  }
+}
+
+.header__nav {
+  margin: 0 100px 0 0;
+}
+
+.header__nav-list {
+  margin-top: 60px;
+}
+
+/*Vuetify themes*/
+.v-list.theme--light {
+  color: $color-red-dark;
+  background-color: $color-green-semi;
+}
+
+.v-list-item__title {
+  color: $color-yellow;
+  &:hover {
+    color: $color-red-dark;
+  }
+}
+
+.v-icon::before {
+  color: $color-yellow;
+}
+
+/*User account navigation*/
+.header__list-second {
+  position: absolute;
+  display: none;
+  top: 23px;
+  right: -5px;
+}
+
+.header__item-first { 
+  margin: 0;
+  position: relative;
+  list-style: none;
+ 
+  &:hover {
+    .header__list-second {
+      display: block;
+    }
+  }
+}
+
+.header__item-second {
+  margin: 3px;
+  float: right;
+  list-style: none;
+}
+
+.header__link-first {
+  color: $color-yellow;
+}
+
+.header__link-second {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-yellow;
+  &:hover {
+    color: $color-red;
+  }
+}
+

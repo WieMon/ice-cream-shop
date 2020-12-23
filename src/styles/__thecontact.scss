@@ -1,0 +1,55 @@
+/*=============================
+          TheContact
+==============================*/
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 700px;
+  color: $color-brown;
+}
+
+.contact__content {
+  width: 100%;
+  padding: 15px;
+  background-color: $color-red;
+  box-shadow: 8px 8px 12px 4px $color-brown-light;
+  border-radius: $radius;
+  &:hover {
+    transform: $transform;
+  }
+}
+
+.contact__title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.contact__media {
+  position: relative;
+  margin: 30px 0;
+}
+
+.contact__img {
+  width: 100%; 
+  box-shadow: 8px 8px 12px 4px $color-brown-light;
+  border-radius: $radius;
+}
+
+.contact__icon {
+  position: absolute;
+  top: 130px;
+  left: 200px;
+  color: $color-red;
+  font-size: 40px;
+  &:hover {
+    color: $color-red-dark;
+    transform: $transform;
+  }
+}
+
+.contact__span {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px $color-yellow-light;
+}
