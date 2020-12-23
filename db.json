@@ -164,7 +164,7 @@
     "slide4": {
       "img": "slide-4.png",
       "alt": "Ice cream truck",
-      "text": "Yummy in Greece!!! Come and see the slideshow from our trip along the Mediterranean coast. See you on Friday 8 p.m."
+      "text": "Yummy in Greece!!! Come and see the slideshow from our trip along the Mediterranean coast. See you on Friday 8 pm.{{"
     }
   },
   "reviews": {
@@ -188,6 +188,18 @@
       "title": "Our story",
       "text1": "Born out of the need for fine homemade ice cream, Yummy was opened in 2005. We started with a small ice cream shop in the Old Town. Today we can invite you to our cafe where you can taste one of the several types of the highest quality, best tasting homemade ice cream. We also offer various desserts, hot and cold drinks.",
       "text2": "On every Thursday we organize special events. Author's meetings, life-music concerts, movie presentations, travel slideshows.... At our cafe you will meet interesting people and their passions."
+    }
+  },
+  "contacts": {
+    "contact1": {
+      "img": "map1.png",
+      "alt": "Yummy marked on the map",
+      "openingdays": "Monday - Sunday",
+      "openinghours": "10 am - 8 pm",
+      "address1": "Kehlhofstrasse 1",
+      "address2": "78467 Konstanz",
+      "phone": "+49 7531 917845",
+      "email": "info@yummy.de"
     }
   }
 }

@@ -22,7 +22,7 @@
         v-for='(history,index) in histories'
         :key='index'
       >
-        <md-card-content class='content__test'>
+        <md-card-content>
           <h2 class='content__title'>
           {{ history.title }}  
           </h2>
@@ -33,9 +33,9 @@
            {{ history.text2 }}
          </p>
         </md-card-content> 
-        <md-media >
+        <md-card-media >
           <img class='content__img' :src="require(`../../assets/history/${history.img}`)">
-        </md-media>
+        </md-card-media>
       </md-card>
     </v-row>
   </v-container>

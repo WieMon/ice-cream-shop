@@ -9,7 +9,7 @@ $color-yellow-dark: #dabb82;
 $color-green-light: #99ffff;
 $color-green-semi: #33cccc;
 $color-green-dark: #008080;
-$color-red-light:#ffb4b4;
+//$color-red-light:#d4585e; //
 $color-red: #ff6b6b;
 $color-red-dark: #e42b2b;
 $color-brown: #291107;
@@ -25,6 +25,9 @@ $font-weight-bold: 700;
 /*Radius*/
 $radius: 20px;
 $radius-circle: 50%;
+
+/**/
+$transform: scale(1.2);
 
 /*Header height*/
 $height-header: 160px;
@@ -221,7 +224,7 @@ body, #app {
 .v-list-item__title {
   color: $color-yellow;
   &:hover {
-    color: red;
+    color: $color-red-dark;
   }
 }
 
@@ -357,7 +360,7 @@ body, #app {
   box-shadow: 4px 3px 10px 5px $color-yellow-dark;
   border-radius: $radius-circle;
   &:hover {
-    transform: scale(1.2);
+    transform: $transform;
     box-shadow: 
     4px 3px 5px 1px $color-brown,
     6px 3px 7px 6px $color-yellow-dark,
@@ -387,7 +390,6 @@ body, #app {
 }
 .content__img {
   margin: 30px 0 0 0;
-  margin-left: 30px;
   height: 100%;
   border-radius: $radius;
   @include md {
@@ -395,6 +397,61 @@ body, #app {
   }
 } 
 
+/*=============================
+          TheContact
+==============================*/
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 700px;
+  color: $color-brown;
+}
+
+.contact__content {
+  width: 100%;
+  padding: 15px;
+  background-color: $color-red;
+  box-shadow: 8px 8px 12px 4px $color-brown-light;
+  border-radius: $radius;
+  &:hover {
+    transform: $transform;
+  }
+}
+
+.contact__title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.contact__media {
+  position: relative;
+  margin: 30px 0;
+}
+
+.contact__img {
+  width: 100%; 
+  box-shadow: 8px 8px 12px 4px $color-brown-light;
+  border-radius: $radius;
+}
+
+.contact__icon {
+  position: absolute;
+  top: 130px;
+  left: 200px;
+  color: $color-red;
+  font-size: 40px;
+  &:hover {
+    color: $color-red-dark;
+    transform: $transform;
+  }
+}
+
+.contact__span {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px $color-yellow-light;
+}
 /*=============================
           input
 ==============================*/
