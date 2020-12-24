@@ -10,6 +10,7 @@
   border-radius: $radius;
   box-shadow: 4px 4px 5px 2px $color-brown-light;
   cursor: pointer;
+  outline: none;
   &:hover {
     color: $color-red;
     box-shadow: 4px 4px 5px 2px $color-red;

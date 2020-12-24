@@ -24,7 +24,7 @@ $font-weight-bold: 700;
 $radius: 20px;
 $radius-circle: 50%;
 
-/**/
+/*Transformation*/
 $transform: scale(1.2);
 
 /*Header height*/
@@ -43,7 +43,7 @@ $xl-breakpoint: 1600px;
 }
 
 @mixin xs {
-  @media only screen and (min-width: $xs-breakpoint)
+  @media screen and (min-width: $xs-breakpoint)
   {@content;}
 }
 

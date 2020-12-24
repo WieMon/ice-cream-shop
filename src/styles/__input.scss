@@ -2,13 +2,27 @@
           input
 ==============================*/
 .input {
-
+  text-align: center;
+  margin-top:40px;
+  padding: 40px;
+  background-color: $color-yellow;
+  box-shadow: 4px 4px 15px 2px $color-yellow-dark;
+  border: 1px solid $color-red;
+  border-radius: $radius;
+  color: $color-brown;
 }
 
-.input__form {
-  color: red;
+.input__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
 }
 
 .input__field {
-  border: 1px solid black;
+  margin: 0 15px;
+  border: 1px solid $color-brown-light;
+  border-radius: $radius;
+  outline: none;
 }
+

@@ -82,7 +82,7 @@ export default {
   },
   computed: {
     isVisible() {
-      return this.$vuetify.breakpoint.sm;
+      return this.$vuetify.breakpoint.smAndDown;
     },
     isAuth() {
       return this.$store.getters.isAuth;

@@ -1,22 +1,20 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <form class='input__form' @submit.prevent="onSubmit">
-          <h2>Sign in</h2>
-          <div class='input'>
-            <label class='input__label'>Email</label>
-            <input class='input__field' type='email' v-model='formdata.email'/>
-          </div>
-          <div class='input'>
-            <label class='input__label'>Password</label>
-            <input class='input__field' type='text' v-model='formdata.password' />
-          </div>
-          <button class='button'>
-          Sign in
-          </button>
+    <v-row class='row'>
+        <form class='input' @submit.prevent="onSubmit">
+        <h2>Sign in</h2>
+        <div class='input__div'>
+          <label>Email:</label>
+          <input class='input__field' type='email' v-model='formdata.email'/>
+        </div>
+        <div class='input__div'>
+          <label>Password:</label>
+          <input class='input__field' type='text' v-model='formdata.password' />
+        </div>
+        <button class='button'>
+        Sign in
+        </button>
         </form>
-      </v-col>
     </v-row>
   </v-container>
 </template>
