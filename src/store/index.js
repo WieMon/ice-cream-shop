@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from 'vue';
 import Vuex from 'vuex';
 import router from '../router/index';
@@ -12,6 +13,7 @@ export default new Vuex.Store({
     email: '',
     token: '',
     refresh: '',
+    addpost: false,
   },
   getters: {
     isAuth(state) {
@@ -19,6 +21,9 @@ export default new Vuex.Store({
         return true;
       } return false;
     },
+    addPostStatus(state){
+      return state.addpost
+  },
   },
   mutations: {
     auth(state,authData) {
@@ -34,6 +39,12 @@ export default new Vuex.Store({
       localStorage.removeItem('refresh');
       router.push('/');
     },
+    addPost(state){
+      state.addpost = true;
+    },
+    clearAddPost(state){
+      state.addpost = false;
+  },
   },
   actions: {
     signup({ commit }, payload) {
@@ -80,6 +91,17 @@ export default new Vuex.Store({
         });
       }
     },
+    addPost({ commit, state }, payload) {
+      Vue.http.post(`posts.json?auth=${state.token}`,payload)
+      .then(response => response.json())
+      .then(response => {
+        commit('addPost');
+        setTimeout(()=>{
+          commit('clearAddPost')
+      },3000)
+      });
+
+    }
   },
   modules: {}
 });

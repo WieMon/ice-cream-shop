@@ -28,7 +28,12 @@
               @blur='$v.formdata.title.$touch()'
               v-model='formdata.title'
             >
-             <p class='dashboard__error' v-if='$v.formdata.title.$error'>Please add the title.</p>
+             <p 
+              class='dashboard__error' 
+              v-if='$v.formdata.title.$error'
+            >
+              Please add the title.
+            </p>
         </div>
         <div class='dashboard__div'>
           <wysiwyg 
@@ -44,11 +49,16 @@
             v-model='formdata.author'
           >
         </div>
+        <div class='dashboard__div'>
+          <button 
+            class='button' 
+            type='submit'
+          >
+            Add
+          </button>
+        </div>
         <div class='dashboard__success' v-if='addpost'>
           You have successfully added the post.
-        </div>
-        <div class='dashboard__div'>
-          <button class='button' type='submit'>Add</button>
         </div>
       </form>
       <md-dialog 
@@ -96,6 +106,13 @@ export default {
      isAuth() {
       return this.$store.getters.isAuth;
     },
+    addpost(){
+      let status = this.$store.getters['addPostStatus'];
+        if(status){
+          this.clearPost();
+        }
+      return status;
+    },
   },
   methods: {
     submitHandler() {
@@ -114,8 +131,16 @@ export default {
       this.addPost();
     },
     addPost() {
-
-    }
+      this.$store.dispatch('addPost', this.formdata);
+    },
+    clearPost(){
+      this.$v.$reset();
+      this.formdata = {
+        title:'',
+        description:'',
+        author:''
+      };
+    },
   }
 };
 </script>

@@ -40,7 +40,14 @@
 }
 
 .dashboard__success {
-  
+  padding: 10px;
+  text-align: center;
+  background: $color-green-dark;
+  color: $color-yellow;
+  font-size: 20px;
+  font-family: $font-family-title;
+  border-radius: $radius;
+  box-shadow: 3px 3px 8px $color-yellow-dark;
 }
 
 .dashboard__dialog {
