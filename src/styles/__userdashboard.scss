@@ -11,19 +11,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .dashboard__field {
   padding: 5px 10px;
+  margin-top: 10px;
   outline: none;
   box-shadow: 5px 5px 12px $color-yellow-dark;
   border-radius: $radius;
 }
-
-// .dashboard__field--wysiwyg {
-//   border: red;//
-// }
 
 .dashboard__title {
   font-family: $font-family-title;
@@ -33,17 +30,27 @@
   text-shadow: 2px 2px 2px $color-yellow-dark;
 }
 
-.dashboard__error {
+.dashboard__error, .v-application p {
   color: $color-red-dark;
+  margin: 0;
 }
 
-// .dashboard__div.invalid input,.dashboard__div.invalid select {
-//   border: 1px solid red;
-// }
+.dashboard__div.invalid input,.dashboard__div.invalid select {
+  border: 1px solid $color-red-dark;
+}
 
-// .dashboard__field--wysiwyg.invalid input,.dashboard__field--wysiwyg.invalid select {
-//   border: 1px solid red;
-// }
 .dashboard__success {
+  
+}
 
+.dashboard__dialog {
+  background-color: $color-yellow;
+}
+
+.dashboard__dialog-text {
+  margin: 0;
+}
+
+.dashboard__dialog-button {
+  cursor: pointer;
 }

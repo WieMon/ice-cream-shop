@@ -19,6 +19,7 @@
         </div>
         <div 
           class='dashboard__div' 
+          :class='{invalid: $v.formdata.title.$error}'
         >
           <label>Title</label>
             <input
@@ -49,11 +50,23 @@
         <div class='dashboard__div'>
           <button class='button' type='submit'>Add</button>
         </div>
-        
       </form>
-     
-        
-      
+      <md-dialog 
+        class='dashboard__dialog' 
+        :md-active='dialog'
+      >
+          <p class='dashboard__dialog-text' >
+            Your post has no content. Please add information you would like to share with us.
+          </p>
+          <md-dialog-actions>
+            <md-button 
+              class='button'
+              @click='cancelDialog'
+            >
+            I want to add it 
+            </md-button>
+          </md-dialog-actions>
+        </md-dialog>
     </v-row>
   </v-container>
 </template>
@@ -64,6 +77,7 @@ import { required } from 'vuelidate/lib/validators';
 export default {
   data() {
     return {
+      dialog: false,
       formdata: {
         title: '',
         description: '',
@@ -92,8 +106,12 @@ export default {
             this.addPost();
           }
       } else {
-        alert('Something is wrong');
+        alert('Please add the title.');
       }
+    },
+    cancelDialog() {
+      this.dialog = false;
+      this.addPost();
     },
     addPost() {
 
