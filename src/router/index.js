@@ -5,7 +5,7 @@ import TheMenu from '../views/TheMenu.vue';
 import TheContact from '../views/TheContact.vue';
 import SignUp from '../views/SignUp.vue';
 import SignIn from '../views/SignIn.vue';
-import TheDashboard from '../views/Dashboard/UserDashboard.vue';
+import UserDashboard from '../views/UserDashboard.vue';
 
 Vue.use(VueRouter);
 
@@ -37,8 +37,8 @@ const routes = [
   },
   {
     path: '/user-dashboard',
-    name: 'TheDashboard',
-    component: TheDashboard,
+    name: 'UserDashboard',
+    component: UserDashboard,
   }
 ];
 

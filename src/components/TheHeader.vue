@@ -75,8 +75,7 @@ export default {
       links: [
         {text: 'Home', route: '/'},
         {text: 'Menu', route: '/the-menu'},
-        {text: 'Visit us', route: '/the-contact'},
-        {text: 'Dashboard', route: '/user-dashboard'}
+        {text: 'Visit us', route: '/the-contact'}
       ]
     };
   },

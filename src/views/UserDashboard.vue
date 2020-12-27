@@ -1,6 +1,6 @@
 <template>
   <v-container >
-    <v-row class='row'>
+    <v-row class='row' v-if='isAuth'>
       <form class='dashboard' @submit.prevent='submitHandler'>
         <div class='dashboard__div'>
           <h1 class='dashboard__title'>Hello</h1>
@@ -75,6 +75,9 @@ export default {
     }
   },
   computed: {
+     isAuth() {
+      return this.$store.getters.isAuth;
+    },
     addpost(){
       let status = this.$store.getters['addPostStatus'];
         if(status){
