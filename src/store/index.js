@@ -30,6 +30,9 @@ export default new Vuex.Store({
       state.email = authData.email;
       state.token = authData.idToken;
       state.refresh = authData.refreshToken;
+      if(authData.type === 'sign-in') {
+        router.push('/user-dashboard')
+      }
     },
     logout(state) {
       state.email = null;
@@ -67,7 +70,10 @@ export default new Vuex.Store({
       })
       .then( response => response.json())
       .then( authData => {
-        commit('auth',authData);
+        commit('auth',{
+          ...authData,
+        type: 'sign-in'
+      });
         localStorage.setItem('token',authData.idToken);
         localStorage.setItem('refresh',authData.refreshToken);
       })

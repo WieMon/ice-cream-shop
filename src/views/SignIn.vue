@@ -8,7 +8,7 @@
           <input 
             class='input__field' 
             type='email' 
-            v-model='formdata.email'
+            v-model.trim='formdata.email'
             @blur='$v.formdata.email.$touch()'
           />
           <div v-if="$v.formdata.email.$error">
@@ -25,7 +25,7 @@
           <input 
             class='input__field' 
             type='password' 
-            v-model='formdata.password'
+            v-model.trim='formdata.password'
             @blur='$v.formdata.password.$touch()'
           />
           <div v-if='$v.formdata.password.$error'>
