@@ -1,16 +1,19 @@
 .dashboard {
-  
-  padding: 10px 80px;
+  padding: 10px;
   background-color: $color-yellow;
   box-shadow: 5px 5px 20px $color-green-dark;
   color: $color-green-dark;
   border-radius: $radius;
+  @include md {
+    padding: 10px 80px;
+  }
 }
 
 .dashboard__div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -22,15 +25,27 @@
   border-radius: $radius;
 }
 
+.dashboard__field--wysiwg  {
+  width: 320px;
+  text-align: left;
+  @include sm {
+    width: 540px;
+  }
+}
+
 .dashboard__title {
   font-family: $font-family-title;
 }
 
 .dashboard__title,.dashboard__subtitle {
+  font-size: 18px;
   text-shadow: 2px 2px 2px $color-yellow-dark;
+  @include sm {
+    font-size: 24px;
+  }
 }
 
-.dashboard__error, .v-application p {
+.dashboard__error {
   color: $color-red-dark;
   margin: 0;
 }
@@ -48,16 +63,4 @@
   font-family: $font-family-title;
   border-radius: $radius;
   box-shadow: 3px 3px 8px $color-yellow-dark;
-}
-
-.dashboard__dialog {
-  background-color: $color-yellow;
-}
-
-.dashboard__dialog-text {
-  margin: 0;
-}
-
-.dashboard__dialog-button {
-  cursor: pointer;
 }

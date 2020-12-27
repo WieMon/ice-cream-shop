@@ -1,17 +1,6 @@
 <template>
   <v-container >
-    <v-row class='row' v-if='!isAuth'>
-      <ul>
-        <li class='button' >
-          <router-link to="/sign-in">Sign in</router-link>
-        </li>
-        <li class='button' >
-          <router-link to='/sign-up'>Register</router-link>
-        </li>
-      </ul>
-    </v-row> 
-
-    <v-row class='row' v-if='isAuth'>
+    <v-row class='row'>
       <form class='dashboard' @submit.prevent='submitHandler'>
         <div class='dashboard__div'>
           <h1 class='dashboard__title'>Hello</h1>
@@ -37,7 +26,7 @@
         </div>
         <div class='dashboard__div'>
           <wysiwyg 
-              class='dashboard__field'
+              class='dashboard__field dashboard__field--wysiwg'
               v-model='formdata.description'
           />
         </div>
@@ -61,22 +50,6 @@
           You have successfully added the post.
         </div>
       </form>
-      <md-dialog 
-        class='dashboard__dialog' 
-        :md-active='dialog'
-      >
-          <p class='dashboard__dialog-text' >
-            Your post has no content. Please add information you would like to share with us.
-          </p>
-          <md-dialog-actions>
-            <md-button 
-              class='button'
-              @click='cancelDialog'
-            >
-            I want to add it 
-            </md-button>
-          </md-dialog-actions>
-        </md-dialog>
     </v-row>
   </v-container>
 </template>
@@ -87,7 +60,6 @@ import { required } from 'vuelidate/lib/validators';
 export default {
   data() {
     return {
-      dialog: false,
       formdata: {
         title: '',
         description: '',
@@ -103,9 +75,6 @@ export default {
     }
   },
   computed: {
-     isAuth() {
-      return this.$store.getters.isAuth;
-    },
     addpost(){
       let status = this.$store.getters['addPostStatus'];
         if(status){
@@ -118,7 +87,7 @@ export default {
     submitHandler() {
       if(!this.$v.$invalid) {
           if(this.formdata.description === '') {
-            this.dialog = true;
+            alert('Your post has no content. Please add information you would like to share with us.');
           } else {
             this.addPost();
           }
@@ -145,6 +114,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   @import "~vue-wysiwyg/dist/vueWysiwyg.css";
 </style>
