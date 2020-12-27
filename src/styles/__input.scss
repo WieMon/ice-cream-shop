@@ -14,6 +14,7 @@
 
 .input__div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 15px;
@@ -27,3 +28,7 @@
   outline: none;
 }
 
+.input__error {
+  color: $color-red-dark;
+  margin: 0;
+}
