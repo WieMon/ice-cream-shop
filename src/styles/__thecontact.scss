@@ -24,6 +24,10 @@
 .contact__title {
   margin-bottom: 15px;
   text-transform: uppercase;
+  font-size: 18px;
+  @include sm {
+    font-size: 24px;
+  }
 }
 .contact__media {
   position: relative;
@@ -49,7 +53,11 @@
 }
 
 .contact__span {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
-  text-shadow: 1px 1px 2px $color-yellow-light;
+  text-shadow: 1px 1px 1px $color-yellow-dark;
+  font-size: 18px;
+  @include sm {
+    font-size: 20px;
+  }
 }

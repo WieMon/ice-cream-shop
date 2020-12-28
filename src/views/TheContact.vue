@@ -17,12 +17,13 @@
           </span>
         </md-card-content>
         <md-card-media class='contact__media'>
-          <font-awesome-icon class='contact__icon' icon='thumbtack' />
           <img class='contact__img' :src="require(`../assets/${contact.img}`)" >
         </md-card-media>
         <md-card-content class='contact__content'>
           <span class='contact__span'>
-            {{ contact.address1 }}, {{ contact.address2 }}
+            {{ contact.address1 }} 
+            <br>
+            {{ contact.address2 }}
           </span>
           <br>
           <span class='contact__span'>

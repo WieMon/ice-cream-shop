@@ -4,14 +4,14 @@ import router from './router';
 import store from './store';
 import VueResource from 'vue-resource';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faIceCream, faUser, faChevronRight, faChevronLeft, faThumbtack } from '@fortawesome/free-solid-svg-icons';
+import { faIceCream, faUser, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import vuetify from './plugins/vuetify';
 import { MdCard } from 'vue-material/dist/components';
 import wysiwyg from 'vue-wysiwyg';
 import vuelidate from 'vuelidate';
 
-library.add(faIceCream, faUser, faChevronRight, faChevronLeft, faThumbtack);
+library.add(faIceCream, faUser, faChevronRight, faChevronLeft);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(VueResource);
