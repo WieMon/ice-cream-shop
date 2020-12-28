@@ -5,11 +5,17 @@
   text-align: center;
   margin: 30px;
   padding: 10px;
-  width: 420px;
+  width: 320px;
   background-color: $color-yellow;
   box-shadow: 4px 4px 15px 2px $color-yellow-dark;
   border-radius: $radius;
   color: $color-brown;
+  @include sm {
+    width: 380px;
+  }
+  @include md {
+    width: 420px;
+  }
 }
 
 .menu__title {
@@ -18,8 +24,13 @@
 
 .menu__text {
   margin-bottom: 10px;
+  font-size: 16px;
+  @include sm {
+    font-size: 18px;
+  }
 }
 
 .menu__img {
+  width: 100%;
   border-radius: $radius;
 }
