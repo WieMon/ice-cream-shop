@@ -6,25 +6,51 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  width: 700px;
-  height: 550px;
-  padding: 20px 40px;
+  width: 320px;
+  height: 370px;
+  padding: 10px;
   color: $color-brown;
   background-color: $color-yellow;
   box-shadow: 4px 4px 15px 2px $color-yellow-dark;
   border-radius: $radius;
+  @include sm {
+    width: 500px;
+    height: 450px;
+    padding: 10px;
+  }
+  @include md {
+    position: relative;
+    width: 700px;
+    height: 545px;
+    padding: 10px 20px;
+  }
 }
 
 .slider__img {
   width: 100%;
-  margin-bottom: 20px;
   border-radius: $radius;
 }
 
+.slider__text {
+  margin-bottom: 0;
+}
+
+.slider__icon-div {
+  @include md {
+    position: absolute;
+    bottom: 120px;
+    left: 310px;
+  }
+}
 .slider__icon {
-  margin: 30px;
-  font-size: 50px;
+  margin: 0 15px;
+  font-size: 25px;
   color: $color-brown-light;
+    @include md {
+    margin: 0 20px;
+    font-size: 30px;
+    color: $color-yellow;
+  }
 }
 
 .fade-enter-active {

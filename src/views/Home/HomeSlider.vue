@@ -1,22 +1,26 @@
 <template>
   <v-container>
     <v-row class='row'>
-      <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
       <transition-group name='fade' tag='div'>
         <div class='slider__div' v-for="number in [currentNumber]" :key='number'>
           <img  
             class='slider__img' 
             :src='currentImage' 
           />
-          <p
+        <div class='slider__icon-div'>
+        <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
+        <a @click="nextImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-right' /></a>
+      </div>
+          <p class='slider__text'
             :src='currentDescription'>
               {{currentDescription}}
           </p>
         </div>
       </transition-group>
-      <a @click="nextImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-right' /></a>
+
+      
+      
     </v-row>
-    
   </v-container>
 </template>
 
