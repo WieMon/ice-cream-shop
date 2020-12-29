@@ -1,7 +1,7 @@
 # ice-cream-shop
 
 ## Description:
-I created this web application to practice Vue.js. It has been integrated with the Firebase authentication and database.
+The ice cream parlor web application built with Vue.js. It has been integrated with the Firebase authentication and database.
 
 [DEMO]()
 
