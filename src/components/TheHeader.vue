@@ -1,4 +1,4 @@
-<template>
+ <template>
   <header class='header'>
     <div class='header__title-div'>
       <h1 class='header__title'>

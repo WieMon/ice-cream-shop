@@ -1,25 +1,22 @@
 <template>
   <v-container>
     <v-row class='row'>
-      <transition-group name='fade' tag='div'>
-        <div class='slider__div' v-for="number in [currentNumber]" :key='number'>
+      <image-slider>
+        <div class='slider__div' v-for='(slide, number) in [slides]' :key='number'>
           <img  
             class='slider__img' 
             :src='currentImage' 
           />
-        <div class='slider__icon-div'>
-        <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
-        <a @click="nextImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-right' /></a>
-      </div>
+          <div class='slider__icon-div'>
+            <a @click="prevImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-left' /></a>
+            <a @click="nextImage" href='#'><font-awesome-icon class='slider__icon' icon='chevron-right' /></a>
+          </div>
           <p class='slider__text'
             :src='currentDescription'>
               {{currentDescription}}
           </p>
         </div>
-      </transition-group>
-
-      
-      
+      </image-slider>
     </v-row>
   </v-container>
 </template>
@@ -33,12 +30,13 @@ export default {
     };
   },
   mounted: function() {
-    this.startSlider();
+   this.startSlider();
+   
   },
   methods: {
     startSlider: function() {
-       setTimeout(this.nextImage, 1000);
-     },
+      this.nextImage();
+    },
     nextImage: function() {
       this.currentNumber += 1;
     },
