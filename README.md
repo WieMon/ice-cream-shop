@@ -3,7 +3,7 @@
 ## Description:
 The ice cream parlor web application built with Vue.js. It has been integrated with the Firebase authentication and database.
 
-[DEMO]()
+[DEMO](https://wiemon.github.io/ice-cream-shop/)
 
 ## Technologies:
 - vue: 2.6.11
