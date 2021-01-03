@@ -17,7 +17,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(VueResource);
 Vue.use(MdCard);
-Vue.use(wysiwyg, {maxHeight: '500px',});
+Vue.use(wysiwyg, {maxHeight: '500px', hideModules: { 'table': true , 'removeFormat': true, 'separator': true, 'image': true, 'code': true },});
 Vue.use(vuelidate);
 Vue.use(VueCarousel);
 
