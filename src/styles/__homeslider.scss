@@ -50,16 +50,3 @@
     color: $color-yellow;
   }
 }
-
-.VueCarousel-navigation-button {
-  &.VueCarousel-navigation-next, &.VueCarousel-navigation-prev{
-    position: absolute;
-    color: $color-yellow;
-    top: 75%;
-    left: 50%;
-    font-size: 30px;
-    &:focus {
-      outline: none;
-    }
-  } 
-}

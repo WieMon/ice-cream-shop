@@ -5,8 +5,10 @@
         <carousel 
           :per-page='1' 
           :mouse-drag='true' 
-          :navigationEnabled='true'
           :paginationEnabled='false'
+          :autoplay='true'
+          :autoplayTimeout='3000'
+          :autoplayHoverPause='true'
           :loop='true'
           :centerMode='true'
         >
