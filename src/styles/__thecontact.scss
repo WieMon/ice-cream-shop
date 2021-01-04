@@ -7,13 +7,12 @@
   align-items: center;
   text-align: center;
   width: 700px;
-  color: $color-brown;
 }
 
 .contact__content {
   width: 100%;
   padding: 15px;
-  background-color: $color-red;
+  background-color: $color-green-semi;
   box-shadow: 8px 8px 12px 4px $color-brown-light;
   border-radius: $radius;
   &:hover {
@@ -55,7 +54,7 @@
 .contact__span {
   font-size: 18px;
   margin-bottom: 15px;
-  text-shadow: 1px 1px 1px $color-yellow-dark;
+  text-shadow: 1px 1px  $color-green-light;
   font-size: 18px;
   @include sm {
     font-size: 20px;
